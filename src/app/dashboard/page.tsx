@@ -21,6 +21,8 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuItem } from "@/components/ui/dropdown-menu"
 import { Card, CardHeader, CardContent } from "@/components/ui/card"
+import Link from 'next/link';
+import { NextPage } from 'next';
 
 
 export default function dashboard() {
@@ -29,10 +31,14 @@ export default function dashboard() {
     <div className="flex flex-col min-h-screen bg-muted/40">
       <header className="sticky top-0 z-30 flex items-center h-16 px-4 border-b bg-background sm:px-6">
         <div className="flex items-center gap-4">
+          <Link href="/createfile">
+
           <Button size="sm" className="hidden sm:inline-flex">
             <PlusIcon className="w-4 h-4 mr-2" />
             Create New File
           </Button>
+
+          </Link>
           <div className="relative flex-1 hidden sm:flex">
             <div className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
             <Input type="search" placeholder="Search files..." className="w-full pl-10 rounded-md bg-muted" />
@@ -57,8 +63,11 @@ export default function dashboard() {
             <DropdownMenuItem>Settings</DropdownMenuItem>
             <DropdownMenuItem>Support</DropdownMenuItem>
             <DropdownMenuSeparator />
+            <Link href='/'>
             <DropdownMenuItem>Logout</DropdownMenuItem>
+          </Link>
           </DropdownMenuContent>
+
         </DropdownMenu>
       </header>
       <main className="flex-1 p-4 sm:p-6 bg-[#f0fff4]">

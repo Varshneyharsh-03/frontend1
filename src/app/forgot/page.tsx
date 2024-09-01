@@ -30,7 +30,7 @@ import Link from "next/link"
 
 export default function forgotpassword() {
   return (
-    <div className="mx-auto max-w-md space-y-6 py-12">
+    <div className="mx-auto max-w-md space-y-6 py-12 ">
       <div className="space-y-2 text-center">
         <h1 className="text-3xl font-bold">Forgot Password</h1>
         <p className="text-muted-foreground">
@@ -45,6 +45,12 @@ export default function forgotpassword() {
         <Button type="submit" className="w-full">
           Submit
         </Button>
+
+        <Link href='/login'>
+        <Button type="submit" className="w-full mt-2">
+          Back To Login
+        </Button>
+        </Link>
       </form>
       <div className="flex justify-center gap-4 text-sm text-muted-foreground">
         <Link href="#" className="hover:underline" prefetch={false}>

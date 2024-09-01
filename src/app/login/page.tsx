@@ -4,6 +4,8 @@ import { Input } from "@/components/ui/input"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Button } from "@/components/ui/button"
 
+import { NextPage } from 'next';
+
 
 export default function login() {
 
@@ -14,7 +16,7 @@ export default function login() {
           <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-foreground">Login to your account</h2>
           <p className="mt-2 text-center text-sm text-muted-foreground">
             Or{" "}
-            <Link href="#" className="font-medium text-primary hover:text-primary/80" prefetch={false}>
+            <Link href="/signup" className="font-medium text-primary hover:text-primary/80" prefetch={false}>
               create a new account
             </Link>
           </p>
@@ -56,18 +58,20 @@ export default function login() {
               </Label>
             </div>
             <div className="text-sm">
-              <Link href="#" className="font-medium text-primary hover:text-primary/80" prefetch={false}>
+              <Link href="/forgot" className="font-medium text-primary hover:text-primary/80" prefetch={false}>
                 Forgot your password?
               </Link>
             </div>
           </div>
           <div>
+            <Link href="/dashboard">
             <Button
               type="submit"
               className="relative flex w-full justify-center rounded-md bg-primary py-2 px-4 text-sm font-medium text-primary-foreground shadow-sm hover:bg-primary/80 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
             >
               Login
             </Button>
+            </Link>
           </div>
         </form>
       </div>

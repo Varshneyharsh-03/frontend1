@@ -29,12 +29,7 @@ export default function signup() {
     <div className="w-full max-w-md space-y-6">
       <div className="text-center">
         <h1 className="text-3xl font-bold tracking-tight text-foreground">Sign up to your account</h1>
-        <p className="mt-2 text-muted-foreground">
-          Don't have an account?{" "}
-          <Link href="#" className="font-medium text-primary hover:underline" prefetch={false}>
-            Register
-          </Link>
-        </p>
+
       </div>
       <Card>
         <CardContent className="space-y-4">
@@ -61,12 +56,14 @@ export default function signup() {
               <Label htmlFor="password">Password</Label>
               <Input id="password" type="password" required />
             </div>
+            <Link href='/dashboard'>
             <Button type="submit" className="w-full">
               Sign up
             </Button>
+            </Link>
           </form>
           <div className="text-center text-sm text-muted-foreground">
-            <Link href="#" className="font-medium text-primary hover:underline" prefetch={false}>
+            <Link href="/forgot" className="font-medium text-primary hover:underline" prefetch={false}>
               Forgot your password?
             </Link>
           </div>
